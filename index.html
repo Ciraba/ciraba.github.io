@@ -42,8 +42,8 @@
     .eyebrow { letter-spacing: .16em; }
     .hero-fade {
       background:
-        linear-gradient(180deg, rgba(247,250,252,.55) 0%, rgba(247,250,252,.82) 55%, #F7FAFC 100%),
-        radial-gradient(1200px 500px at 85% 10%, rgba(43,108,176,.10), transparent 60%);
+        linear-gradient(90deg, rgba(255,255,255,.92) 0%, rgba(247,250,252,.78) 38%, rgba(235,244,255,.35) 70%, rgba(235,244,255,.15) 100%),
+        linear-gradient(180deg, rgba(235,244,255,.35) 0%, rgba(247,250,252,0) 45%, rgba(247,250,252,.6) 88%, #F7FAFC 100%);
     }
     .poster-grid { background-image: linear-gradient(#E3E9F1 1px, transparent 1px); background-size: 100% 7px; }
     :focus-visible { outline: 2px solid #2B6CB0; outline-offset: 3px; border-radius: 6px; }
@@ -76,6 +76,7 @@
         <ul class="flex items-center gap-1 text-[15px] font-medium">
           <li><a href="#top" class="relative rounded-md px-3.5 py-2 text-navy-900 after:absolute after:inset-x-3.5 after:-bottom-[17px] after:h-0.5 after:rounded-full after:bg-academic-600" aria-current="page">Home</a></li>
           <li><a href="#research" class="rounded-md px-3.5 py-2 text-slate-600 transition hover:text-navy-900">Research</a></li>
+          <li><a href="#training" class="rounded-md px-3.5 py-2 text-slate-600 transition hover:text-navy-900">Training</a></li>
           <li><a href="#output" class="rounded-md px-3.5 py-2 text-slate-600 transition hover:text-navy-900">Scientific Output</a></li>
           <li><a href="#about" class="rounded-md px-3.5 py-2 text-slate-600 transition hover:text-navy-900">About</a></li>
           <li><a href="#contact" class="rounded-md px-3.5 py-2 text-slate-600 transition hover:text-navy-900">Contact</a></li>
@@ -121,6 +122,7 @@
         <ul class="space-y-1 text-base font-medium text-navy-900">
           <li><a href="#top" class="block rounded-lg bg-mist px-3 py-2.5">Home</a></li>
           <li><a href="#research" class="block rounded-lg px-3 py-2.5 hover:bg-mist">Research</a></li>
+          <li><a href="#training" class="block rounded-lg px-3 py-2.5 hover:bg-mist">Training</a></li>
           <li><a href="#output" class="block rounded-lg px-3 py-2.5 hover:bg-mist">Scientific Output</a></li>
           <li><a href="#about" class="block rounded-lg px-3 py-2.5 hover:bg-mist">About</a></li>
           <li><a href="#contact" class="block rounded-lg px-3 py-2.5 hover:bg-mist">Contact</a></li>
@@ -146,32 +148,22 @@
     <!-- ===================================================== -->
     <section class="relative isolate overflow-hidden bg-mist pt-16 lg:pt-[72px]">
 
-      <!-- Panoramic background.
-           To use your own photo, replace the <svg> below with:
+      <!-- Panoramic background — Lausanne (cathedral, Grand-Pont, lake & Alps).
+           To use a photo instead, replace the <svg> below with:
            <img src="assets/hero-panorama.jpg" alt="" class="absolute inset-0 -z-20 h-full w-full object-cover opacity-40 grayscale" /> -->
-      <svg class="absolute inset-x-0 bottom-0 -z-20 h-[78%] w-full text-navy-800" viewBox="0 0 1440 520" preserveAspectRatio="xMidYMax slice" fill="none" aria-hidden="true">
-        <g opacity=".24" stroke="currentColor" stroke-width="1.2">
-          <!-- distant skyline -->
-          <path d="M0 300h40v-40h30v-25h22v65h28v-90h18v-20h14v20h18v90h34v-55h26v55h20v-120l14-12 14 12v120h30v-70h40v70h22v-35h30v35h26v-150h8v-22h6v22h8v150h30v-60h44v60h18v-90h22l10-14 10 14v90h36v-48h30v48h40v-110h12v-18h10v18h12v110h26v-62h34v62h28v-40h22v40h30v-95h18v-26h16v26h18v95h40v-55h28v55h30v-80h36v80h26v-130l18-18 18 18v130h24v-60h38v60h30v-44h22v44h40v-100h28v100h36v-58h24v58h40v-38h30v38h60"/>
-          <!-- cathedral / dome -->
-          <path d="M520 300v-70a28 28 0 0 1 56 0v70M548 202v-22M540 186h16"/>
-          <!-- windows -->
-          <path d="M800 230h8m-8 18h8m-8 18h8M1180 220h8m-8 18h8m-8 18h8M330 250h8m-8 18h8" stroke-width="2"/>
-        </g>
-        <!-- bridge -->
-        <g opacity=".32" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
-          <path d="M0 352h1440"/>
-          <path d="M0 362h1440" opacity=".6"/>
-          <path d="M80 352a160 90 0 0 1 320 0M400 352a160 90 0 0 1 320 0M720 352a160 90 0 0 1 320 0M1040 352a160 90 0 0 1 320 0"/>
-          <path d="M240 262v90M560 262v90M880 262v90M1200 262v90" opacity=".5"/>
-          <path d="M80 352v70M400 352v70M720 352v70M1040 352v70M1360 352v70" stroke-width="3"/>
-        </g>
-        <!-- river -->
-        <g opacity=".22" stroke="currentColor" stroke-linecap="round">
-          <path d="M0 440c120-8 240 8 360 0s240-8 360 0 240 8 360 0 240-8 360 0"/>
-          <path d="M60 468c100-6 200 6 300 0s200-6 300 0M760 470c120-6 240 6 360 0s180-4 280 0"/>
-          <path d="M200 496c80-4 160 4 240 0M900 498c90-4 180 4 270 0"/>
-        </g>
+      <svg class="absolute inset-x-0 bottom-0 -z-20 h-full w-full text-navy-800" viewBox="0 0 1440 520" preserveAspectRatio="xMidYMax slice" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Line drawing of Lausanne: the cathedral above the city, Lake Geneva and the Alps, with the Grand-Pont in the foreground">
+        <g opacity=".28" stroke-width="1.1"><path d="M0 250 L60 232 L120 240 L190 205 L240 222 L300 186 L345 212 L400 196 L470 228 L540 200 L600 214 L660 178 L720 206 L790 190 L850 220 L920 196 L980 208 L1040 172 L1100 200 L1170 184 L1240 214 L1300 192 L1370 220 L1440 206"/><path d="M190 205 l18 14 14-6 M300 186 l20 16 16-8 M660 178 l22 17 18-7 M1040 172 l24 16 18-9 M1170 184 l18 15 16-6" opacity=".7"/></g><g opacity=".22"><path d="M0 262h1440"/><path d="M90 272h260"/><path d="M520 274h340"/><path d="M980 271h300"/><path d="M240 281h180"/><path d="M760 282h220"/><path d="M1200 280h160"/></g><path opacity=".35" d="M0 372 C200 360 360 340 520 336 C700 330 860 316 960 306 C1040 298 1120 292 1200 296 C1300 302 1380 318 1440 326"/><g opacity=".22"><path d="M0 362h40v-14l14-8 14 8v10h36v-18h30v14h40v-10l16-9 16 9v6h44v-20h26v18h52v-12h34v-8h30v14h48v-16l18-10 18 10v10h40v-12h34v8h44v-18h28v12h46v-8l14-8 14 8v2h60v-14h30v6M1210 296v-12h28v-8h34v14h40v-10l16-8 16 8v16h40v-6h56"/></g><g opacity=".38" stroke-width="1.3">
+<path d="M960 304V250h150v52"/>
+<path d="M960 250l75-26 75 26"/>
+<path d="M1110 252h46v48M1156 252a34 34 0 0 1 34 34v14"/>
+<path d="M930 304V176h34v128"/>
+<path d="M930 176l17-16 17 16"/><path d="M937 160h20"/><path d="M947 160V84"/><path d="M938 160l9-76 9 76"/>
+<path d="M940 196v14a7 7 0 0 0 14 0v-14M940 232v16a7 7 0 0 0 14 0v-16"/>
+<path d="M1040 224V178h40v46"/><path d="M1040 178l20-12 20 12"/><path d="M1060 166V110"/><path d="M1046 168l14-58 14 58"/>
+<path d="M1048 190v14a6 6 0 0 0 12 0v-14M1062 190v14a6 6 0 0 0 12 0v-14"/>
+<path d="M978 268v20a6 6 0 0 0 12 0v-20M1004 268v20a6 6 0 0 0 12 0v-20M1030 268v20a6 6 0 0 0 12 0v-20M1056 268v20a6 6 0 0 0 12 0v-20M1082 268v20a6 6 0 0 0 12 0v-20M1124 266v18a6 6 0 0 0 12 0v-18"/>
+<circle cx="1060" cy="252" r="6"/>
+</g><g opacity=".34" stroke-width="1.2"><path d="M0 396h1440M0 388h1440" stroke-width="1.6"/><path d="M0 446h1440"/><path d="M6 446V416a26.0 26.0 0 0 1 52 0V446"/><path d="M4 520V472a28.0 28.0 0 0 1 56 0V520"/><path d="M70 446V416a26.0 26.0 0 0 1 52 0V446"/><path d="M68 520V472a28.0 28.0 0 0 1 56 0V520"/><path d="M134 446V416a26.0 26.0 0 0 1 52 0V446"/><path d="M132 520V472a28.0 28.0 0 0 1 56 0V520"/><path d="M198 446V416a26.0 26.0 0 0 1 52 0V446"/><path d="M196 520V472a28.0 28.0 0 0 1 56 0V520"/><path d="M262 446V416a26.0 26.0 0 0 1 52 0V446"/><path d="M260 520V472a28.0 28.0 0 0 1 56 0V520"/><path d="M326 446V416a26.0 26.0 0 0 1 52 0V446"/><path d="M324 520V472a28.0 28.0 0 0 1 56 0V520"/><path d="M390 446V416a26.0 26.0 0 0 1 52 0V446"/><path d="M388 520V472a28.0 28.0 0 0 1 56 0V520"/><path d="M454 446V416a26.0 26.0 0 0 1 52 0V446"/><path d="M452 520V472a28.0 28.0 0 0 1 56 0V520"/><path d="M518 446V416a26.0 26.0 0 0 1 52 0V446"/><path d="M516 520V472a28.0 28.0 0 0 1 56 0V520"/><path d="M582 446V416a26.0 26.0 0 0 1 52 0V446"/><path d="M580 520V472a28.0 28.0 0 0 1 56 0V520"/><path d="M646 446V416a26.0 26.0 0 0 1 52 0V446"/><path d="M644 520V472a28.0 28.0 0 0 1 56 0V520"/><path d="M710 446V416a26.0 26.0 0 0 1 52 0V446"/><path d="M708 520V472a28.0 28.0 0 0 1 56 0V520"/><path d="M774 446V416a26.0 26.0 0 0 1 52 0V446"/><path d="M772 520V472a28.0 28.0 0 0 1 56 0V520"/><path d="M838 446V416a26.0 26.0 0 0 1 52 0V446"/><path d="M836 520V472a28.0 28.0 0 0 1 56 0V520"/><path d="M902 446V416a26.0 26.0 0 0 1 52 0V446"/><path d="M900 520V472a28.0 28.0 0 0 1 56 0V520"/><path d="M966 446V416a26.0 26.0 0 0 1 52 0V446"/><path d="M964 520V472a28.0 28.0 0 0 1 56 0V520"/><path d="M1030 446V416a26.0 26.0 0 0 1 52 0V446"/><path d="M1028 520V472a28.0 28.0 0 0 1 56 0V520"/><path d="M1094 446V416a26.0 26.0 0 0 1 52 0V446"/><path d="M1092 520V472a28.0 28.0 0 0 1 56 0V520"/><path d="M1158 446V416a26.0 26.0 0 0 1 52 0V446"/><path d="M1156 520V472a28.0 28.0 0 0 1 56 0V520"/><path d="M1222 446V416a26.0 26.0 0 0 1 52 0V446"/><path d="M1220 520V472a28.0 28.0 0 0 1 56 0V520"/><path d="M1286 446V416a26.0 26.0 0 0 1 52 0V446"/><path d="M1284 520V472a28.0 28.0 0 0 1 56 0V520"/><path d="M1350 446V416a26.0 26.0 0 0 1 52 0V446"/><path d="M1348 520V472a28.0 28.0 0 0 1 56 0V520"/><path d="M1414 446V416a26.0 26.0 0 0 1 52 0V446"/><path d="M1412 520V472a28.0 28.0 0 0 1 56 0V520"/><path d="M0 388h1440" stroke-dasharray="2 6" opacity=".6" transform="translate(0 -8)"/></g>
       </svg>
       <div class="hero-fade absolute inset-0 -z-10" aria-hidden="true"></div>
 
@@ -280,44 +272,72 @@
     </section>
 
     <!-- ===================================================== -->
-    <!-- SECTION 2 — KEY FIGURES                               -->
+    <!-- SECTION 2 — EDUCATION & TRAINING                      -->
     <!-- ===================================================== -->
-    <section class="border-y border-line bg-mist py-16 lg:py-20" aria-labelledby="figures-title">
+    <section id="training" class="scroll-mt-20 border-y border-line bg-mist py-20 lg:py-24" aria-labelledby="training-title">
       <div class="mx-auto max-w-site px-5 sm:px-8">
-        <div class="flex flex-col gap-2 lg:flex-row lg:items-end lg:justify-between">
-          <div>
-            <p class="eyebrow text-xs font-bold uppercase text-academic-600">Key figures</p>
-            <h2 id="figures-title" class="mt-2 font-serif text-2xl font-semibold tracking-tight text-navy-900 sm:text-3xl">A rigorous and international approach</h2>
+        <div class="flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
+          <div class="max-w-2xl">
+            <p class="eyebrow text-xs font-bold uppercase text-academic-600">Education &amp; training</p>
+            <h2 id="training-title" class="mt-2 font-serif text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">Building expertise in health economics and policy</h2>
           </div>
-          <p class="max-w-md text-[15px] text-slate-600">Figures drawn from the systematic and scoping reviews conducted during my doctoral work.</p>
+          <p class="max-w-md text-[15px] leading-relaxed text-slate-600">Doctoral training chosen to connect patient-centred measurement with the economic and political questions that shape health systems.</p>
         </div>
 
-        <dl class="mt-10 grid grid-cols-2 overflow-hidden rounded-2xl border border-line bg-white shadow-card lg:grid-cols-4">
-          <div class="flex flex-col gap-4 border-b border-r border-line p-6 sm:flex-row sm:items-center sm:p-8 lg:border-b-0">
-            <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-navy-900 text-white">
-              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-9V3"/><path d="M7.5 15h9"/></svg>
-            </span>
-            <div><dt class="sr-only">Instruments analysed</dt><dd><span class="block font-serif text-4xl font-semibold leading-none text-navy-900 sm:text-[44px]" data-count="51">51</span><span class="mt-1.5 block text-sm font-medium text-slate-600">instruments analysed</span></dd></div>
+        <ol class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <li class="group flex flex-col rounded-2xl border border-line bg-white p-6 shadow-card transition hover:-translate-y-1 hover:shadow-lift lg:p-7">
+            <div class="flex items-center justify-between gap-3">
+              <span class="grid h-12 w-12 place-items-center rounded-xl bg-academic-50 text-academic-600"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 6.5v.01M15.9 8.1v.01M17.5 12v.01M15.9 15.9v.01M12 17.5v.01M8.1 15.9v.01M6.5 12v.01M8.1 8.1v.01" stroke-width="2.4"/></svg></span>
+              <span class="text-xs font-medium tabular-nums text-slate-500">Feb – Mar 2025</span>
+            </div>
+            <h3 class="mt-6 font-serif text-xl font-semibold leading-snug text-navy-900">The Europe of Health</h3>
+            <p class="mt-3 flex-1 text-[15px] leading-relaxed text-slate-600">How health policy is shaped at European level and translated across member states.</p>
+            <p class="mt-6 inline-flex w-fit rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wider bg-academic-50 text-academic-700">Health Law &amp; Policy</p>
+          </li>
+          <li class="group flex flex-col rounded-2xl border border-line bg-white p-6 shadow-card transition hover:-translate-y-1 hover:shadow-lift lg:p-7">
+            <div class="flex items-center justify-between gap-3">
+              <span class="grid h-12 w-12 place-items-center rounded-xl bg-academic-50 text-academic-600"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="7" r="3"/><circle cx="5" cy="17" r="2.5"/><circle cx="19" cy="17" r="2.5"/><path d="M10.5 9.5 6.5 15M13.5 9.5l4 5.5M7.5 17h9"/></svg></span>
+              <span class="text-xs font-medium tabular-nums text-slate-500">Feb 2025</span>
+            </div>
+            <h3 class="mt-6 font-serif text-xl font-semibold leading-snug text-navy-900">Sociology of Public Action</h3>
+            <p class="mt-3 flex-1 text-[15px] leading-relaxed text-slate-600">How public problems are framed, put on the agenda and turned into policy.</p>
+            <p class="mt-6 inline-flex w-fit rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wider bg-academic-50 text-academic-700">Health Law &amp; Policy</p>
+          </li>
+          <li class="group flex flex-col rounded-2xl border border-line bg-white p-6 shadow-card transition hover:-translate-y-1 hover:shadow-lift lg:p-7">
+            <div class="flex items-center justify-between gap-3">
+              <span class="grid h-12 w-12 place-items-center rounded-xl bg-academic-50 text-academic-600"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M4 10h16L12 4z"/><path d="M6.5 10v8M10 10v8M14 10v8M17.5 10v8"/><path d="M15 2.5h4v4" /></svg></span>
+              <span class="text-xs font-medium tabular-nums text-slate-500">Apr 2026</span>
+            </div>
+            <h3 class="mt-6 font-serif text-xl font-semibold leading-snug text-navy-900">Privatisation and Marketisation of the Health System</h3>
+            <p class="mt-3 flex-1 text-[15px] leading-relaxed text-slate-600">How market mechanisms are reshaping the organisation and funding of care.</p>
+            <p class="mt-6 inline-flex w-fit rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wider bg-academic-50 text-academic-700">Health Law &amp; Policy</p>
+          </li>
+          <li class="group flex flex-col rounded-2xl border border-transparent bg-navy-900 p-6 shadow-card transition hover:-translate-y-1 hover:shadow-lift lg:p-7">
+            <div class="flex items-center justify-between gap-3">
+              <span class="grid h-12 w-12 place-items-center rounded-xl bg-white/10 text-white ring-1 ring-white/15"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V5M4 19h16"/><path d="m7 15 4-4 3 3 5-6"/></svg></span>
+              <span class="text-xs font-medium tabular-nums text-slate-400">Jun 2026</span>
+            </div>
+            <h3 class="mt-6 font-serif text-xl font-semibold leading-snug text-white">Introduction to Health Economics</h3>
+            <p class="mt-3 flex-1 text-[15px] leading-relaxed text-slate-300">Core tools to assess costs, efficiency and the value of health interventions.</p>
+            <p class="mt-6 inline-flex w-fit rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wider bg-white/10 text-academic-100">Economics &amp; Management</p>
+          </li>
+        </ol>
+
+        <!-- Seminar organisation -->
+        <article class="mt-5 grid items-center gap-6 rounded-2xl border border-academic-600/30 bg-gradient-to-r from-white via-white to-academic-50 p-6 shadow-card md:grid-cols-[auto_1fr_auto] lg:p-8">
+          <span class="grid h-14 w-14 place-items-center rounded-2xl bg-academic-600 text-white"><svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4M7 9h5M7 12h8"/></svg></span>
+          <div>
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="rounded-full bg-navy-900 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-white">Organiser</span>
+              <span class="text-xs font-semibold uppercase tracking-wider text-academic-700">Interdisciplinary doctoral seminar</span>
+            </div>
+            <h3 class="mt-3 font-serif text-xl font-semibold leading-snug text-navy-900 sm:text-2xl">Participatory research and action against social inequalities in health</h3>
           </div>
-          <div class="flex flex-col gap-4 border-b border-line p-6 sm:flex-row sm:items-center sm:p-8 lg:border-b-0 lg:border-r">
-            <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-navy-900 text-white">
-              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.5"/></svg>
-            </span>
-            <div><dt class="sr-only">Competency domains</dt><dd><span class="block font-serif text-4xl font-semibold leading-none text-navy-900 sm:text-[44px]" data-count="10">10</span><span class="mt-1.5 block text-sm font-medium text-slate-600">competency domains</span></dd></div>
+          <div class="space-y-1.5 text-sm text-slate-600 md:text-right">
+            <p class="flex items-center gap-2 md:justify-end"><svg viewBox="0 0 24 24" class="h-4 w-4 text-academic-600" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M4 10h16L12 4z"/><path d="M6.5 10v8M10 10v8M14 10v8M17.5 10v8"/></svg>Université Paris Cité</p>
+            <p class="flex items-center gap-2 md:justify-end"><svg viewBox="0 0 24 24" class="h-4 w-4 text-academic-600" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>28 May 2026</p>
           </div>
-          <div class="flex flex-col gap-4 border-r border-line p-6 sm:flex-row sm:items-center sm:p-8">
-            <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-navy-900 text-white">
-              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v16H5.5A1.5 1.5 0 0 1 4 18.5z"/><path d="M20 5.5A1.5 1.5 0 0 0 18.5 4H13v16h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg>
-            </span>
-            <div><dt class="sr-only">Studies included</dt><dd><span class="block font-serif text-4xl font-semibold leading-none text-navy-900 sm:text-[44px]" data-count="77">77</span><span class="mt-1.5 block text-sm font-medium text-slate-600">studies included</span></dd></div>
-          </div>
-          <div class="flex flex-col gap-4 p-6 sm:flex-row sm:items-center sm:p-8">
-            <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-navy-900 text-white">
-              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.4 2.4 3.5 5.3 3.5 8.5s-1.1 6.1-3.5 8.5c-2.4-2.4-3.5-5.3-3.5-8.5S9.6 5.9 12 3.5z"/></svg>
-            </span>
-            <div><dt class="sr-only">Countries represented</dt><dd><span class="block font-serif text-4xl font-semibold leading-none text-navy-900 sm:text-[44px]" data-count="26">26</span><span class="mt-1.5 block text-sm font-medium text-slate-600">countries represented</span></dd></div>
-          </div>
-        </dl>
+        </article>
       </div>
     </section>
 
@@ -588,17 +608,6 @@
       });
     }));
 
-    // Count-up animation for key figures
-    const counters = document.querySelectorAll('[data-count]');
-    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
-      const io = new IntersectionObserver(entries => entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        const el = entry.target, target = +el.dataset.count, start = performance.now();
-        const step = t => { const p = Math.min((t - start) / 1100, 1); el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(step); };
-        requestAnimationFrame(step); io.unobserve(el);
-      }), { threshold: .6 });
-      counters.forEach(c => io.observe(c));
-    }
   </script>
 </body>
 </html>
